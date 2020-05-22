@@ -3,3 +3,7 @@ node_js:
   - 7
 install:
   - npm install
+script:
+  - pwd
+  - whoami
+  - npm test
