@@ -10,12 +10,10 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 // start tests "mocha index.js"
 
-describe('Array', function() {
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      assert.equal([1, 2, 3].indexOf(3), 2);
+describe('tests if tests are working', function(){
+    it('1==1', function(){
+      assert.equal(1, 1);
     });
-  });
 });
 
 // Integration tests
