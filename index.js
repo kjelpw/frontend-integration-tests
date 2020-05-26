@@ -10,6 +10,14 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 // start tests "mocha index.js"
 
+describe('Array', function() {
+  describe('#indexOf()', function(){
+    it('should return -1 when the value is not present', function(){
+      assert.equal([1, 2, 3].indexOf(4), -1);
+    });
+  });
+});
+
 // Integration tests
 describe('GET special collections home page test', function() { // Test description
     it('responds with HTML 200 response', function(done) {
