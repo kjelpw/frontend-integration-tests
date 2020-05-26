@@ -10,7 +10,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 // start tests "mocha index.js"
 
-describe('tests if tests are working', function(){
+describe('Tests if tests are working', function(){
     it('1==1', function(){
       assert.equal(1, 1);
     });
@@ -69,7 +69,6 @@ describe('Special Collections (Selenium) Tests', function() {
 
     // executes before each test
     beforeEach(function(done) {
-
         browser = new webdriver.Builder().
         withCapabilities(webdriver.Capabilities.chrome()).
         // withCapabilities(webdriver.Capabilities.safari()).
