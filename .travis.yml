@@ -2,6 +2,17 @@ sudo: required
 language: node_js
 node_js:
   - lts/*
+env:
+  global:
+    - CHROME_BIN=/usr/bin/google-chrome
+    - DISPLAY=:99.0
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - oracle-java8-set-default
 install:
   - npm install
 script:
