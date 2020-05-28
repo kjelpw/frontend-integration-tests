@@ -66,7 +66,7 @@ describe('GET special collections object details', function() {
 let browser;
 
 describe('Special Collections (Selenium) Tests', function() {
-    console.log('Here');
+
     // executes before each test
     beforeEach(function(done) {
         browser = new webdriver.Builder().
