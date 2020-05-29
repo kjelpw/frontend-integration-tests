@@ -17,5 +17,4 @@ script:
   - 'java --version'
   - pwd
   - whoami
-  - webdriver-manager update
   - npm test

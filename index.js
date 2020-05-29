@@ -3,6 +3,8 @@
 const request = require('supertest');
 const webdriver = require('selenium-webdriver');
 const assert = require('assert');
+var chrome = require('selenium-webdriver/chrome');
+var path = require('chromedriver').path;
 const frontend = 'https://specialcollections.du.edu';  // change to local environment or travis environment url
 
 // handles ssl cert if it's available on test domains.
@@ -64,7 +66,9 @@ describe('GET special collections object details', function() {
 // https://www.toolsqa.com/selenium-webdriver/webelement-commands/
 // ** you can also use a driver for firefox and safari
 let browser;
-System.setProperty("webdriver.chrome.driver", "/home/travis/build/kjelpw/frontend-integration-tests/chromedriver");
+
+var service = new chrome.ServiceBuilder(path).build();
+chrome.setDefaultService(service);
 
 describe('Special Collections (Selenium) Tests', function() {
 
