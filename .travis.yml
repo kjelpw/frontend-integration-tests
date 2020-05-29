@@ -12,9 +12,10 @@ addons:
 install:
   - npm install
 script:
+  - sudo apt update
+  - sudo apt install openjdk-8-jdk
   - 'java --version'
   - pwd
   - whoami
-  - chmod a+r /usr/lib/node_modules/decktape/node_modules/puppeteer/.local-chromium/linux-508693/chrome-linux/*
-  - chmod a+x /usr/lib/node_modules/decktape/node_modules/puppeteer/.local-chromium/linux-508693/chrome-linux/chrome
+  - webdriver-manager update
   - npm test
