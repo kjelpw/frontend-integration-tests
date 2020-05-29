@@ -84,7 +84,7 @@ describe('Special Collections (Selenium) Tests', function() {
     });
 
     // executes after each test
-    /*
+
     afterEach(function(done) {
 
         setTimeout(function() {
@@ -94,33 +94,29 @@ describe('Special Collections (Selenium) Tests', function() {
 
         done();
     });
-    */
 
     it('UI tests', function(done) {
+        try {
+          browser.findElement(webdriver.By.name('q[]')).sendKeys('hockey');
+          browser.findElement(webdriver.By.tagName('button')).click().then(function() {
 
-        browser.findElement(webdriver.By.name('q[]')).sendKeys('hockey');
-        browser.findElement(webdriver.By.tagName('button')).click().then(function() {
+              // TODO: add assertions
 
-            // TODO: add assertions
+              browser.findElement(webdriver.By.className('accordion')).click().then(function() {
 
-            browser.findElement(webdriver.By.className('accordion')).click().then(function() {
+                  // TODO: add assertions
 
-                // TODO: add assertions
+                  let facet = browser.findElement(webdriver.By.className('facet-name'));
+                  facet.findElement(webdriver.By.tagName('a')).click();
 
-                let facet = browser.findElement(webdriver.By.className('facet-name'));
-                facet.findElement(webdriver.By.tagName('a')).click();
+                  // TODO: add assertions
+                  // assert.equal('', '');
 
-                // TODO: add assertions
-                // assert.equal('', '');
-
-                setTimeout(function() {
-                    console.log('quit.');
-                    browser.quit();
-                }, 15000); // adjust
-
-            });
-        });
-
-        done();
+              });
+          });
+          return true;
+        } catch(err) {
+          return false;
+        }
     });
 });
