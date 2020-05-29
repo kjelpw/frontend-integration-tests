@@ -64,6 +64,7 @@ describe('GET special collections object details', function() {
 // https://www.toolsqa.com/selenium-webdriver/webelement-commands/
 // ** you can also use a driver for firefox and safari
 let browser;
+System.setProperty("webdriver.chrome.driver", "/home/travis/build/kjelpw/frontend-integration-tests/chromedriver");
 
 describe('Special Collections (Selenium) Tests', function() {
 
