@@ -117,7 +117,7 @@ describe('Special Collections (Selenium) Tests', function() {
           });
           done();
         } catch(err) {
-          done(err);
+          done(new Error());
         }
     });
 });
