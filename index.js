@@ -84,7 +84,7 @@ describe('Special Collections (Selenium) Tests', function() {
     });
 
     // executes after each test
-
+    /*
     afterEach(function(done) {
 
         setTimeout(function() {
@@ -93,7 +93,7 @@ describe('Special Collections (Selenium) Tests', function() {
         }, 15000); // adjust
 
     });
-
+    */
 
     it('UI tests', function(done) {
         try {
@@ -114,9 +114,10 @@ describe('Special Collections (Selenium) Tests', function() {
 
               });
           });
-
+          browser.quit();
           done();
         } catch(err) {
+          browser.quit();
           done(new Error());
         }
     });
