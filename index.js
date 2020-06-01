@@ -114,7 +114,10 @@ describe('Special Collections (Selenium) Tests', function() {
 
               });
           });
-          browser.quit();
+          setTimeout(function() {
+              console.log('quit.');
+              browser.quit();
+          }, 15000); // adjust
           done();
         } catch(err) {
           browser.quit();
