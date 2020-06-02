@@ -96,7 +96,6 @@ describe('Special Collections (Selenium) Tests', function() {
     */
 
     it('UI tests', function(done) {
-        console.log('HERE');
         try {
           browser.findElement(webdriver.By.name('q[]')).sendKeys('hockey');
           browser.findElement(webdriver.By.tagName('button')).click().then(function() {
@@ -121,6 +120,7 @@ describe('Special Collections (Selenium) Tests', function() {
           }, 15000); // adjust
           done();
         } catch(err) {
+          console.log('ERROR HERE');
           browser.quit();
           done(new Error());
         }
