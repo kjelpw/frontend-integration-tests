@@ -1,10 +1,10 @@
 {
   "name": "frontend-integration-tests",
   "version": "0.1.0",
-  "description": "Tests DU repository discovery layer (forntend)",
+  "description": "Tests DU repository discovery layer (frontend)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index.js"
+    "test": "mocha index.js --timeout 30000"
   },
   "keywords": [
     "Integration",
