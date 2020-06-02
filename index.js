@@ -100,7 +100,7 @@ describe('Special Collections (Selenium) Tests', function() {
         try {
           browser.findElement(webdriver.By.name('q[]')).sendKeys('hockey');
           browser.findElement(webdriver.By.tagName('button')).click().then(function() {
-
+            console.log('HERE');
               // TODO: add assertions
 
               browser.findElement(webdriver.By.className('accordion')).click().then(function() {
