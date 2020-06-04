@@ -75,7 +75,7 @@ describe('Special Collections (Selenium) Tests', function() {
     // executes before each test
     beforeEach(function(done) {
         var opts = new chrome.Options()
-        .addArguments('--no-sandbox');
+        .addArguments('--no-sandbox').addArguments('--disable-dev-shm-usage');
         browser = new webdriver.Builder().
         withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(opts).build();
         // withCapabilities(webdriver.Capabilities.safari()).
@@ -98,15 +98,16 @@ describe('Special Collections (Selenium) Tests', function() {
 
     it('UI tests', function(done) {
         try {
+          console.log('search hockey');
           browser.findElement(webdriver.By.name('q[]')).sendKeys('hockey');
           browser.findElement(webdriver.By.tagName('button')).click().then(function() {
-            console.log('HERE');
-              // TODO: add assertions
 
+              // TODO: add assertions
+              console.log('click accordion');
               browser.findElement(webdriver.By.className('accordion')).click().then(function() {
 
                   // TODO: add assertions
-
+                  console.log('find facet');
                   let facet = browser.findElement(webdriver.By.className('facet-name'));
                   facet.findElement(webdriver.By.tagName('a')).click();
 
