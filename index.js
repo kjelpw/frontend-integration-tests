@@ -75,7 +75,7 @@ describe('Special Collections (Selenium) Tests', function() {
     // executes before each test
     beforeEach(function(done) {
         var opts = new chrome.Options()
-        .addArguments('--no-sandbox').addArguments('--disable-dev-shm-usage');
+        .addArguments('--no-sandbox').addArguments('--disable-dev-shm-usage').addArguments('--headless');
         browser = new webdriver.Builder().
         withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(opts).build();
         // withCapabilities(webdriver.Capabilities.safari()).
