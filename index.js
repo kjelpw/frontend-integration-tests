@@ -74,11 +74,12 @@ describe('Special Collections (Selenium) Tests', function() {
 
     // executes before each test
     beforeEach(function(done) {
+        var opts = new chrome.Options()
+        .addArguments('--no-sandbox');
         browser = new webdriver.Builder().
-        withCapabilities(webdriver.Capabilities.chrome()).
+        withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(opts).build();
         // withCapabilities(webdriver.Capabilities.safari()).
         // withCapabilities(webdriver.Capabilities.firefox()).
-        build();
         browser.get(frontend);
         done();
     });
